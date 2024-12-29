@@ -9,4 +9,16 @@ public class Car {
         this.year = year;
         this.color = color;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
