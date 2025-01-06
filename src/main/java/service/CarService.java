@@ -1,12 +1,15 @@
 package service;
+
 import model.Car;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class CarService {
-   private final List<Car> cars;
+    private final List<Car> cars;
+
     public CarService() {
         cars = new ArrayList<>();
         cars.add(new Car("BMW", 123123, "yellow"));
@@ -15,14 +18,12 @@ public class CarService {
         cars.add(new Car("Audi", 133221, "purple"));
         cars.add(new Car("Audi", 13, "red"));
     }
+
     public List<Car> getCars(int count) {
         if (count <= 0 || count > 5) {
-            return  cars;
+            return cars;
         } else {
             return cars.subList(0, count);
         }
-
     }
-
-
 }
